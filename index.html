@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bookshelf Apps - Naufal Ulinnuha</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="lib/sweetalert2.min.css">
+</head>
+<body>
+	<div id="app">
+		<div id="task">
+			<div class="content">
+				<div class="x">
+					<h2 align="center">Bookshelf Apps</h2>
+					<br><br>
+					<input class="wfa form-control" type="text" id="it" placeholder="Judul">
+					<input class="wfa form-control" type="text" id="ia" placeholder="Penulis">
+					<input class="wfa form-control" type="number" id="iy" placeholder="Tahun" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length>=4) this.value=this.value.substring(0, 3);">
+					<!-- <input class="wfa form-control" type="text" id="iy" placeholder="Tahun" pattern="/^-?\d+\.?\d*$/" maxlength="4"> -->
+					
+					<div class="row">
+						<input class="baseline" id="is" type="checkbox">
+		                <label for="is">Selesai dibaca</label>
+		                <button class="ml-auto form-control btn-primary" onclick="add()"><p>Tambahkan buku</p></button>
+					</div>
+					<br>
+
+					<p style="margin-bottom: 10px"><b>Cari buku</b></p>
+					<input class="wfa form-control" type="text" placeholder="Search" onkeyup="load(this.value)">
+					<br><br>
+
+					<p style="margin-bottom: 10px"><b>Belum selesai dibaca</b></p>
+					<div id="bIncomplete">
+						<!-- -->
+					</div>
+					<br>
+
+					<p style="margin-bottom: 10px"><b>Selesai dibaca</b></p>
+					<div id="bComplete">
+						<!-- -->
+					</div>
+
+					<div class="row">
+						<p id="total">Total : </p>
+						<button class="ml-auto form-control btn-danger" onclick="wipe()"><p>Hapus semua buku</p></button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+ 
+	</div>
+	<script src="lib/sweetalert2.all.min.js"></script>
+	<script src="lib/sweetalert.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
